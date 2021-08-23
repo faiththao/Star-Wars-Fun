@@ -4,13 +4,14 @@ import { useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Players from './components/Players';
-import CreatePlayer from './components/CreatePlayer';
+import CreateCollection from './components/CreateCollection';
 
 const characterAPI = "http://localhost:3001/results"
 
 function App() {
 
   const [characters, setCharacters] = useState([]);
+  const [charcterCollection, setCharcterCollection] = useState([]);
 
   useEffect(() => {
     fetch(characterAPI)
@@ -18,7 +19,14 @@ function App() {
       .then(data => setCharacters(data))
   }, [])
 
-
+  function handleAddCharacter(characterToAdd) {
+    const inCollection = charcterCollection.find(
+      character => character.uid === characterToAdd.id
+    );
+    if (!inCollection) {
+      setCharcterCollection([...charcterCollection, characterToAdd])
+    }
+  }
 
   return (
     <div className="App">
@@ -29,7 +37,7 @@ function App() {
             <Players characters={characters} />
           </Route>
           <Route path="/createplayer">
-            <CreatePlayer />
+            <CreateCollection characters={characters} onAddCharacter={handleAddCharacter} />
           </Route>
           <Route exact path="/">
             <Home />

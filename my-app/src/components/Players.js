@@ -6,7 +6,7 @@ export default function Players({ characters }) {
     ))
     return (
         <>
-        <h1>Player Cards</h1>
+        <h1>Character Cards</h1>
         {characterInfo}
         </>
     )
