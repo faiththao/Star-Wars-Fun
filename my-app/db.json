@@ -1,0 +1,54 @@
+{
+    "results": [
+    {
+      "uid": "1",
+      "name": "Luke Skywalker",
+      "url": "https://media.contentapi.ea.com/content/dam/star-wars-battlefront-2/images/2019/08/swbf2-refresh-hero-large-heroes-page-luke-skywalker-16x9-xl.jpg.adapt.crop1x1.320w.jpg"
+    },
+    {
+      "uid": "2",
+      "name": "C-3PO",
+      "url": "https://static.wikia.nocookie.net/starwars/images/3/3f/C-3PO_TLJ_Card_Trader_Award_Card.png/revision/latest?cb=20180121052644"
+    },
+    {
+      "uid": "3",
+      "name": "R2-D2",
+      "url": "https://cdn11.bigcommerce.com/s-5ylnei6or5/images/stencil/1280x1280/products/587/695/0116_R2_D2_28__28082.1514653978.jpg?c=2"
+    },
+    {
+      "uid": "4",
+      "name": "Darth Vader",
+      "url": "https://www.swapi.tech/api/people/4"
+    },
+    {
+      "uid": "5",
+      "name": "Leia Organa",
+      "url": "https://www.swapi.tech/api/people/5"
+    },
+    {
+      "uid": "6",
+      "name": "Owen Lars",
+      "url": "https://www.swapi.tech/api/people/6"
+    },
+    {
+      "uid": "7",
+      "name": "Beru Whitesun lars",
+      "url": "https://www.swapi.tech/api/people/7"
+    },
+    {
+      "uid": "8",
+      "name": "R5-D4",
+      "url": "https://www.swapi.tech/api/people/8"
+    },
+    {
+      "uid": "9",
+      "name": "Biggs Darklighter",
+      "url": "https://www.swapi.tech/api/people/9"
+    },
+    {
+      "uid": "10",
+      "name": "Obi-Wan Kenobi",
+      "url": "https://www.swapi.tech/api/people/10"
+    }
+  ]
+}
