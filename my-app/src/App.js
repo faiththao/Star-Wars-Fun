@@ -6,29 +6,27 @@ import Home from './components/Home';
 import Players from './components/Players';
 import CreatePlayer from './components/CreatePlayer';
 
-const HerosAPI = "https://superheroapi.com/api/access-token"
+const characterAPI = "http://localhost:3001/results"
 
 function App() {
 
-  const [heros, setHeros] = useState([]);
-
-  let headers = 
+  const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
-    fetch(HerosAPI, {
-      method : "no-cors" 
-    })
+    fetch(characterAPI)
       .then(res => res.json())
-      .then(heros => console.log(heros))
+      .then(data => setCharacters(data))
   }, [])
+
+
 
   return (
     <div className="App">
-      <header className="App-header">  
+      <header className="App-header">
         <Navbar />
         <Switch>
           <Route path="/players">
-            <Players />
+            <Players characters={characters} />
           </Route>
           <Route path="/createplayer">
             <CreatePlayer />
