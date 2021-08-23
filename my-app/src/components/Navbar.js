@@ -9,7 +9,7 @@ export default function Navbar() {
             <NavLink to="/players">
                 Players
             </NavLink>
-            <NavLink to="/create-player">
+            <NavLink to="/createplayer">
                 Create a Player
             </NavLink>
         </div>
