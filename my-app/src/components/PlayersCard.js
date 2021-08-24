@@ -10,6 +10,7 @@ export default function PlayerCard({ character, onClick }) {
 
     function handleClick() {
         onClick(character)
+        console.log(onClick)
     }
 
     return (

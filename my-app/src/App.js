@@ -31,20 +31,39 @@ function App() {
   //   }
   // }
 
+  // function handleAddCharacter(characterToAdd) {
+  //     const inCollection = characterCollection.find(
+  //         character => character.uid === characterToAdd.uid
+  //     );
+  //     if (!inCollection) {
+  //         setCharacterCollection([...characterCollection, characterToAdd])
+  //     }
+  // }
+
+  // function handleRemoveCharacter(characterToRemove) {
+  //     setCharacterCollection((characterCollection) => 
+  //     characterCollection.filter((character) => 
+  //     character.uid !== characterToRemove.uid))
+  // }
 
   return (
     <div className="App">
       <header className="App-header">
         <Navbar />
         <Switch>
-          <Route path="/players">
+          {/* <Route path="/players">
             <Players 
-            characters={characters} 
+            characters={characters} onAdd={handleAddCharacter}
              />
-          </Route>
+          </Route> */}
           <Route path="/createplayer">
             <CollectionPage
-            characters={characters} />
+            characters={characters} 
+            setCharacters={setCharacters}
+            // collection={characterCollection} 
+            // onRemove={handleRemoveCharacter} 
+            // onAdd={handleAddCharacter}
+            />
           </Route>
           <Route exact path="/">
             <Home />
