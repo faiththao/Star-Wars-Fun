@@ -1,28 +1,56 @@
-import PlayerForm from "./PlayerForm";
-import PlayersCard from "./PlayersCard";
+import { useState } from 'react'
 
-export default function CreateCollection({ characters, onAddCharacter }) {
-    const characterInfo = characters.map((character) => (
+import PlayerForm from "./PlayerForm";
+import PlayersCard from './PlayersCard';
+
+
+export default function CreateCollection({ characters, collection, onRemove }) {
+
+    const [collectionArray, setCollectionArray] = useState([...collection])
+    const [title, setTitle] = useState('');
+
+
+    function addCreatedCharacter(newCharacter) {
+        setCollectionArray([...collectionArray, newCharacter])
+
+        console.log(collectionArray)
+    }
+
+    // const characterList = characters.map((character) => (
+    //     <PlayersCard
+    //         key={character.uid}
+    //         character={character}
+    //          />
+    // ))
+
+    const characterInfo = collectionArray.map((character) => (
         <PlayersCard
             key={character.uid}
             character={character}
-            onClick={onAddCharacter} />
+            onClick={onRemove}
+        />
     ))
+
     return (
-        <div>
+        <div className="newCollection">
             <h1>Create a New Character Collection!</h1>
             Collection Name:
             <input
                 type="text"
                 name="title"
                 placeholder="Name your collection"
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
             />
-            <PlayerForm />
-            <collection className="container">
-                <h3>Default Collection</h3>
-                <div>
-                    {characterInfo}
-                </div>
-            </collection>
+            <input
+                type="submit"
+                name="submit"
+                value="Name Collection"
+                className="submit"
+            />
+            <div className="newContainer">
+                {characterInfo}
+            </div>
+            <PlayerForm addCharacter={addCreatedCharacter} />
         </div>)
 }

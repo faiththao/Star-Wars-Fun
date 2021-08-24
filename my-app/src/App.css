@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+.newCollection {
+  overflow-x: scroll;
+  min-height: 300px;
+  max-width: 100%;
+}
+
+.newContainer {
+  flex-wrap: nowrap;
+  min-height: 100%;
+}
