@@ -26,7 +26,7 @@ export default function PlayerForm() {
                     onChange={(e) => setName(e.target.value)}
                 />
                 <br />
-                Image URL
+                Image URL:
                 <input
                     type="text"
                     name="image"
