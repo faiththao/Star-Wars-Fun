@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function PlayerForm() {
+export default function PlayerForm({addCharacter}) {
     const [name, setName] = useState('');
     const [image, setImage] = useState('');
 
@@ -11,6 +11,10 @@ export default function PlayerForm() {
             name,
             image,
         };
+
+        addCharacter(newCharacter)
+        setImage('')
+        setName('')
 
     }
 

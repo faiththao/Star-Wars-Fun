@@ -1,8 +1,8 @@
 import PlayersCard from "./PlayersCard"
 
-export default function Players({ characters }) {
+export default function Players({ characters, onAddCharacter}) {
     const characterInfo = characters.map((character) => (
-        <PlayersCard key={character.uid} character={character} />
+        <PlayersCard key={character.uid} character={character} onAddCharacter={onAddCharacter} />
     ))
     return (
         <>

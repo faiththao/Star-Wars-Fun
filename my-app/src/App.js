@@ -11,7 +11,8 @@ const characterAPI = "http://localhost:3001/results"
 function App() {
 
   const [characters, setCharacters] = useState([]);
-  const [charcterCollection, setCharcterCollection] = useState([]);
+  //const [collection, setCollection] = useState([]);
+  const [characterCollection, setCharacterCollection] = useState([]);
 
   useEffect(() => {
     fetch(characterAPI)
@@ -20,13 +21,25 @@ function App() {
   }, [])
 
   function handleAddCharacter(characterToAdd) {
-    const inCollection = charcterCollection.find(
+    const inCollection = characterCollection.find(
       character => character.uid === characterToAdd.id
     );
     if (!inCollection) {
-      setCharcterCollection([...charcterCollection, characterToAdd])
+      setCharacterCollection([...characterCollection, characterToAdd])
     }
   }
+
+
+  // original -----------------------------------------------
+  // function handleAddCharacter(characterToAdd) {
+  //   const inCollection = characterCollection.find(
+  //     character => character.uid === characterToAdd.id
+  //   );
+  //   if (!inCollection) {
+  //     setCharacterCollection([...characterCollection, characterToAdd])
+  //   }
+  // }
+
 
   return (
     <div className="App">
@@ -34,10 +47,10 @@ function App() {
         <Navbar />
         <Switch>
           <Route path="/players">
-            <Players characters={characters} />
+            <Players characters={characters} onAddCharacter={handleAddCharacter} />
           </Route>
           <Route path="/createplayer">
-            <CreateCollection characters={characters} onAddCharacter={handleAddCharacter} />
+            <CreateCollection collection={characterCollection}/>
           </Route>
           <Route exact path="/">
             <Home />
@@ -47,5 +60,26 @@ function App() {
     </div>
   );
 }
+
+// original code // -------------------------------------------------------------
+  //   return (
+  //     <div className="App">
+  //       <header className="App-header">
+  //         <Navbar />
+  //         <Switch>
+  //           <Route path="/players">
+  //             <Players characters={characters}  onAddCharacter={handleAddCharacter}/>
+  //           </Route>
+  //           <Route path="/createplayer">
+  //             <CreateCollection chararcters={characters} onAddCharacter={handleAddCharacter} />
+  //           </Route>
+  //           <Route exact path="/">
+  //             <Home />
+  //           </Route>
+  //         </Switch>
+  //       </header>
+  //     </div>
+  //   );
+  // }
 
 export default App;

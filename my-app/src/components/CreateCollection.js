@@ -1,12 +1,25 @@
+import {useState} from 'react'
+
 import PlayerForm from "./PlayerForm";
 import PlayersCard from "./PlayersCard";
 
-export default function CreateCollection({ characters, onAddCharacter }) {
-    const characterInfo = characters.map((character) => (
+export default function CreateCollection({ collection }) {
+
+    const [collectionArray, setCollectionArray] = useState([...collection])
+    
+    function addCreatedCharacter(newCharacter) {
+        
+        setCollectionArray([...collectionArray, newCharacter])
+
+        console.log(collectionArray)
+    }
+
+    const characterInfo = collectionArray.map((character) => (
         <PlayersCard
             key={character.uid}
             character={character}
-            onClick={onAddCharacter} />
+        // onClick={onAddCharacter}
+        />
     ))
     return (
         <div>
@@ -17,7 +30,7 @@ export default function CreateCollection({ characters, onAddCharacter }) {
                 name="title"
                 placeholder="Name your collection"
             />
-            <PlayerForm />
+            <PlayerForm addCharacter={addCreatedCharacter}/>
             <collection className="container">
                 <h3>Default Collection</h3>
                 <div>
