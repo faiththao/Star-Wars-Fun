@@ -50,6 +50,7 @@ export default function CreateCollection({ collection, onRemove }) {
                 className="submit"
             />
             <div className="newContainer">
+                {title}
                 {characterInfo}
                 {characterData}
 
