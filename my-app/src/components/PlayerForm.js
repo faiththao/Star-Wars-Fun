@@ -2,19 +2,48 @@ import { useState } from "react"
 
 export default function PlayerForm({addCharacter}) {
     const [name, setName] = useState('');
-    const [image, setImage] = useState('');
+    const [url, setUrl] = useState('');
+    // const [formData, setFormData] = useState({
+    //     name: "",
+    //     url: "",
+    //   });
 
+    //   function handleChange(event) {
+    //     setFormData({
+    //       ...formData,
+    //       [event.target.name]: event.target.value,
+    //     });
+    //   }
+
+    //   function handleSubmit(event) {
+    //     event.preventDefault();
+    
+    //     const newCharacter = {
+    //       ...formData
+    //     };
+
+    //     fetch("http://localhost:3001/results", {
+    //         method: "POST",
+    //         headers: {
+    //             "Content-Type": "application/json",
+    //         },
+    //         body: JSON.stringify(newCharacter),
+    //         })
+    //         .then((r) => r.json())
+    //         .then(addCharacter);
+    //     }
     function onSubmit(e) {
         e.preventDefault();
 
         const newCharacter = {
             name,
-            image,
+            url,
+            uid: Math.random(),
         };
 
         addCharacter(newCharacter)
-        setImage('')
-        setName('')
+        // setUrl('')
+        // setName('')
 
     }
 
@@ -35,8 +64,8 @@ export default function PlayerForm({addCharacter}) {
                     type="text"
                     name="image"
                     placeholder="Enter a character's image URL..."
-                    value={image}
-                    onChange={(e) => setImage(e.target.value)} 
+                    value={url}
+                    onChange={(e) => setUrl(e.target.value)} 
                 />
                 <br />
                 <input

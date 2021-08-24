@@ -16,21 +16,21 @@ export default function CreateCollection({ collection, onRemove }) {
         console.log(collectionArray)
     }
 
-    const characterInfo = collection.map((character) => (
+    const characterInfo = collectionArray.map((character) => (
         <PlayersCard
             key={character.uid}
             character={character}
             onClick={onRemove}
-             />
+        />
     ))
 
-    // const characterInfo = collectionArray.map((character) => (
-    //     <PlayersCard
-    //         key={character.uid}
-    //         character={character}
-    //         onClick={onRemove}
-    //     />
-    // ))
+    const characterData = collection.map((character) => (
+        <PlayersCard
+            key={character.uid}
+            character={character}
+            onClick={onRemove}
+        />
+    ))
 
     return (
         <div className="newCollection">
@@ -51,6 +51,8 @@ export default function CreateCollection({ collection, onRemove }) {
             />
             <div className="newContainer">
                 {characterInfo}
+                {characterData}
+
             </div>
             <PlayerForm addCharacter={addCreatedCharacter} />
         </div>)
