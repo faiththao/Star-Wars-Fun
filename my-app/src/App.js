@@ -51,11 +51,11 @@ function App() {
       <header className="App-header">
         <Navbar />
         <Switch>
-          {/* <Route path="/players">
+          <Route path="/players">
             <Players 
-            characters={characters} onAdd={handleAddCharacter}
+            characters={characters}
              />
-          </Route> */}
+          </Route>
           <Route path="/createplayer">
             <CollectionPage
             characters={characters} 

@@ -1,13 +1,15 @@
-import PlayersCard from "./PlayersCard"
+import RenderCard from "./RenderCard"
 
-export default function Players({ characters, onAdd }) {
+export default function Players({ characters }) {
     const characterInfo = characters.map((character) => (
-        <PlayersCard key={character.uid} character={character} onClick={onAdd} />
+        <RenderCard key={character.uid} character={character} />
     ))
     return (
-        <>
-        <h1>Character Cards</h1>
-        {characterInfo}
-        </>
+        <div>
+            <collection className='newContainer'>
+                <h1>Character Cards</h1>
+                {characterInfo}
+            </collection>
+        </div>
     )
 }

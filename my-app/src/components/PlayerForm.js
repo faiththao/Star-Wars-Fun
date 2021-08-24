@@ -42,8 +42,8 @@ export default function PlayerForm({addCharacter}) {
         };
 
         addCharacter(newCharacter)
-        // setUrl('')
-        // setName('')
+        setUrl('')
+        setName('')
 
     }
 
