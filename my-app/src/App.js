@@ -11,20 +11,19 @@ const characterAPI = "http://localhost:3001/results"
 function App() {
 
   const [characters, setCharacters] = useState([]);
-  //const [collection, setCollection] = useState([]);
-  // const [characterCollection, setCharacterCollection] = useState([]);
 
-  // function addNewCharacter(character) {
-  //   fetch(characterAPI, {
-  //       method: "POST",
-  //       headers: {
-  //           "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify(character),
-  //   })
-  //       .then((res) => console.log(res))
-  //       .then((json) => console.log(json));
-  // }
+  function addNewCharacter(character) {
+    fetch(characterAPI, {
+      method: "POST",
+      headers: {
+        Accept: "*/*",
+        "Content-type": "application/json"
+      },
+      body: JSON.stringify(character),
+    })
+    .then(res => res.json())
+    .then(character => setCharacters([...characters, character]))
+  }
 
   useEffect(() => {
     fetch(characterAPI)
@@ -40,13 +39,14 @@ function App() {
           <Route path="/players">
             <Players 
             characters={characters}
+            // addComment={addComment}
              />
           </Route>
           <Route path="/createplayer">
             <CollectionPage
             characters={characters} 
             setCharacters={setCharacters}
-            // addNewCharacter={addNewCharacter}
+            addCharacter={addNewCharacter}
             />
           </Route>
           <Route exact path="/">

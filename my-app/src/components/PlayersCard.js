@@ -6,7 +6,7 @@
 
 
 export default function PlayerCard({ character, onClick }) {
-    const { name, url, uid } = character
+    const { name, url, id } = character
 
     function handleClick() {
         onClick(character)
@@ -15,7 +15,7 @@ export default function PlayerCard({ character, onClick }) {
     return (
         <div className="PlayerCard">
             <div 
-            key={uid}
+            key={id}
             onClick={() => handleClick()}>
                 <img src={url} alt={name} className="img" />
                 <h2>Name: {name}</h2>

@@ -1,47 +1,18 @@
 import { useState } from "react"
 
-export default function PlayerForm({ addCreatedCharacter}) {
+export default function PlayerForm({ addCharacter }) {
     const [name, setName] = useState('');
     const [url, setUrl] = useState('');
-    // const [formData, setFormData] = useState({
-    //     name: "",
-    //     url: "",
-    //   });
-
-    //   function handleChange(event) {
-    //     setFormData({
-    //       ...formData,
-    //       [event.target.name]: event.target.value,
-    //     });
-    //   }
-
-    //   function handleSubmit(event) {
-    //     event.preventDefault();
-    
-    //     const newCharacter = {
-    //       ...formData
-    //     };
-
-    //     fetch("http://localhost:3001/results", {
-    //         method: "POST",
-    //         headers: {
-    //             "Content-Type": "application/json",
-    //         },
-    //         body: JSON.stringify(newCharacter),
-    //         })
-    //         .then((r) => r.json())
-    //         .then(addCharacter);
-    //     }
+   
     function onSubmit(e) {
         e.preventDefault();
 
         const newCharacter = {
             name,
             url,
-            uid: Math.random(),
         };
 
-        addCreatedCharacter(newCharacter)
+        addCharacter(newCharacter)
         setUrl('')
         setName('')
 
@@ -50,6 +21,7 @@ export default function PlayerForm({ addCreatedCharacter}) {
     return (
         <div className="container">
             <form className="character-form" onSubmit={onSubmit}>
+                <h2>Create Character to Put in Default Collection</h2>
                 Character Name:
                 <input
                     type="text"

@@ -2,14 +2,14 @@ import { useState } from "react";
 import CreateCollection from "./CreateCollection";
 import DefaultCollection from "./DefaultCollection";
 
-export default function CollectionPage({ characters, addNewCharacter }) {
+export default function CollectionPage({ characters, setCharacters, addCharacter }) {
     // const [characterCollection, setCharacterCollection] = useState([...characters]);
 
     const [characterCollection, setCharacterCollection] = useState([])
 
     function handleAddCharacter(characterToAdd) {
         const inCollection = characterCollection.find(
-            character => character.uid === characterToAdd.uid
+            character => character.id === characterToAdd.id
         );
         if (!inCollection) {
             setCharacterCollection([...characterCollection, characterToAdd])
@@ -19,7 +19,7 @@ export default function CollectionPage({ characters, addNewCharacter }) {
     function handleRemoveCharacter(characterToRemove) {
     setCharacterCollection((characterCollection) =>
         characterCollection.filter((character) =>
-            character.uid !== characterToRemove.uid))
+            character.id !== characterToRemove.uid))
     }
 
 return (
@@ -28,13 +28,14 @@ return (
             //
             collectionSetter={setCharacterCollection}
             characters={characters}
-            addNewCharacter={addNewCharacter}
             //
             collection={characterCollection}
             onRemove={handleRemoveCharacter} />
         <DefaultCollection
             characters={characters}
-            onAdd={handleAddCharacter} />
+            setCharacters={setCharacters}
+            onAdd={handleAddCharacter} 
+            addCharacter={addCharacter} />
     </div>
 )
 }

@@ -2,7 +2,9 @@ import RenderCard from "./RenderCard"
 
 export default function Players({ characters }) {
     const characterInfo = characters.map((character) => (
-        <RenderCard key={character.uid} character={character} />
+        <RenderCard key={character.id} character={character} 
+        // addComment={addComment} 
+        />
     ))
     return (
         <div>
