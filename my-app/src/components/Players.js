@@ -6,10 +6,10 @@ export default function Players({ characters }) {
     ))
     return (
         <div>
-            <collection className='newContainer'>
+            <div className='PlayerContainer'>
                 <h1>Character Cards</h1>
                 {characterInfo}
-            </collection>
+            </div>
         </div>
     )
 }

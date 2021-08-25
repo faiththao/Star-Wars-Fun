@@ -10,12 +10,12 @@ export default function DefaultCollection({ characters, onAdd }) {
     ))
     return (
         <div>
-            <collection className="container">
+            <div className="PlayerContainer">
                 <h3>Default Collection</h3>
                 <div>
                     {characterInfo}
                 </div>
-            </collection>
+            </div>
         </div>
     )
 }
