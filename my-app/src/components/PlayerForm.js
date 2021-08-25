@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function PlayerForm({addCharacter}) {
+export default function PlayerForm({ addCreatedCharacter}) {
     const [name, setName] = useState('');
     const [url, setUrl] = useState('');
     // const [formData, setFormData] = useState({
@@ -41,9 +41,9 @@ export default function PlayerForm({addCharacter}) {
             uid: Math.random(),
         };
 
-        addCharacter(newCharacter)
-        // setUrl('')
-        // setName('')
+        addCreatedCharacter(newCharacter)
+        setUrl('')
+        setName('')
 
     }
 

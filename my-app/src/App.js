@@ -14,55 +14,39 @@ function App() {
   //const [collection, setCollection] = useState([]);
   // const [characterCollection, setCharacterCollection] = useState([]);
 
+  // function addNewCharacter(character) {
+  //   fetch(characterAPI, {
+  //       method: "POST",
+  //       headers: {
+  //           "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(character),
+  //   })
+  //       .then((res) => console.log(res))
+  //       .then((json) => console.log(json));
+  // }
+
   useEffect(() => {
     fetch(characterAPI)
       .then(res => res.json())
       .then(data => setCharacters(data))
   }, [])
 
-
-  // original -----------------------------------------------
-  // function handleAddCharacter(characterToAdd) {
-  //   const inCollection = characterCollection.find(
-  //     character => character.uid === characterToAdd.id
-  //   );
-  //   if (!inCollection) {
-  //     setCharacterCollection([...characterCollection, characterToAdd])
-  //   }
-  // }
-
-  // function handleAddCharacter(characterToAdd) {
-  //     const inCollection = characterCollection.find(
-  //         character => character.uid === characterToAdd.uid
-  //     );
-  //     if (!inCollection) {
-  //         setCharacterCollection([...characterCollection, characterToAdd])
-  //     }
-  // }
-
-  // function handleRemoveCharacter(characterToRemove) {
-  //     setCharacterCollection((characterCollection) => 
-  //     characterCollection.filter((character) => 
-  //     character.uid !== characterToRemove.uid))
-  // }
-
   return (
     <div className="App">
       <header className="App-header">
         <Navbar />
         <Switch>
-          {/* <Route path="/players">
+          <Route path="/players">
             <Players 
-            characters={characters} onAdd={handleAddCharacter}
+            characters={characters}
              />
-          </Route> */}
+          </Route>
           <Route path="/createplayer">
             <CollectionPage
             characters={characters} 
             setCharacters={setCharacters}
-            // collection={characterCollection} 
-            // onRemove={handleRemoveCharacter} 
-            // onAdd={handleAddCharacter}
+            // addNewCharacter={addNewCharacter}
             />
           </Route>
           <Route exact path="/">

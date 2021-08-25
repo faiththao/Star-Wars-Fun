@@ -4,25 +4,12 @@ import PlayerForm from "./PlayerForm";
 import PlayersCard from './PlayersCard';
 
 
-export default function CreateCollection({ collection, onRemove }) {
-
-    const [collectionArray, setCollectionArray] = useState([...collection])
+export default function CreateCollection({ collection, onRemove, collectionSetter, addNewCharacter }) {
     const [title, setTitle] = useState('');
 
-
     function addCreatedCharacter(newCharacter) {
-        setCollectionArray([...collectionArray, newCharacter])
-
-        console.log(collectionArray)
+        collectionSetter([...collection, newCharacter])
     }
-
-    const characterInfo = collectionArray.map((character) => (
-        <PlayersCard
-            key={character.uid}
-            character={character}
-            onClick={onRemove}
-        />
-    ))
 
     const characterData = collection.map((character) => (
         <PlayersCard
@@ -31,6 +18,7 @@ export default function CreateCollection({ collection, onRemove }) {
             onClick={onRemove}
         />
     ))
+
 
     return (
         <div className="newCollection">
@@ -51,10 +39,8 @@ export default function CreateCollection({ collection, onRemove }) {
             />
             <div className="newContainer">
                 {title}
-                {characterInfo}
                 {characterData}
-
             </div>
-            <PlayerForm addCharacter={addCreatedCharacter} />
+            <PlayerForm addCharacter={addNewCharacter} addCreatedCharacter={addCreatedCharacter}/>
         </div>)
 }

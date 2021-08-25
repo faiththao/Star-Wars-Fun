@@ -5,10 +5,10 @@ export default function Navbar() {
         <div className="navbar">
             <NavLink to="/">
                 Home
-            </NavLink>
+            </NavLink> | 
             <NavLink to="/players">
                 Characters
-            </NavLink>
+            </NavLink> | 
             <NavLink to="/createplayer">
                 Create a Character
             </NavLink>
