@@ -31,6 +31,7 @@ a {
 }
 
 .App-header {
+  width: 100%;
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -65,4 +66,9 @@ a {
   grid-area: bt;
   display: flex;
   justify-content: space-evenly;
+}
+
+.homeContainer {
+  grid-area: bt;
+  align-items: center
 }
