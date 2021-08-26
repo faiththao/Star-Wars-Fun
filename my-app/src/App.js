@@ -11,6 +11,7 @@ const characterAPI = "http://localhost:3001/results"
 function App() {
 
   const [characters, setCharacters] = useState([]);
+  const [inCommentBox, setInCommentBox] = useState([])
 
   function addComment(comment, id) {
     fetch(`http://localhost:3001/results/${id}`, {
@@ -22,7 +23,7 @@ function App() {
         body: JSON.stringify(comment),
     })
         .then((res) => res.json())
-        .then((json) => console.log(json));
+        .then((comment) => setInCommentBox([comment, ...inCommentBox]));
   }
 
   function addNewCharacter(character) {
@@ -52,6 +53,7 @@ function App() {
           <Route path="/players">
             <Players 
             characters={characters}
+            inCommentBox={inCommentBox}
             addComment={addComment}
              />
           </Route>
