@@ -19,7 +19,7 @@ export default function CollectionPage({ characters, setCharacters, addCharacter
     function handleRemoveCharacter(characterToRemove) {
     setCharacterCollection((characterCollection) =>
         characterCollection.filter((character) =>
-            character.id !== characterToRemove.uid))
+            character.id !== characterToRemove.id))
     }
 
 return (

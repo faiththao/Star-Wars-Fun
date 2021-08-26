@@ -5,7 +5,7 @@
 // import DeleteIcon from "@material-ui/icons/DeleteOutline"
 
 
-export default function PlayerCard({ character, onClick }) {
+export default function PlayersCard({ character, onClick }) {
     const { name, url, id } = character
 
     function handleClick() {

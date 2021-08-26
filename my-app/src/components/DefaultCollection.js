@@ -7,7 +7,7 @@ export default function DefaultCollection({ characters, onAdd, addCharacter }) {
     const [index, setIndex] = useState(0);
 
     const characterInfo = characters
-        // .slice(index, index + 3)
+        .slice(index, index + 3)
         .map((character) => (
             <PlayersCard
                 key={character.id}
@@ -15,13 +15,14 @@ export default function DefaultCollection({ characters, onAdd, addCharacter }) {
                 onClick={onAdd}
             />
         ))
+        console.log(onAdd)
 
-    // function handleClickMore() {
-    //     setIndex((index) => (index + 3) % characters.length)
-    // }
+    function handleClickMore() {
+        setIndex((index) => (index + 3) % characters.length)
+    }
 
     // function addCreatedCharacter(newCharacter) {
-    //     setCharacters([...characters, newCharacter])
+    //     setCharacters([newCharacter, ...characters])
     // }
 
 
@@ -35,7 +36,7 @@ export default function DefaultCollection({ characters, onAdd, addCharacter }) {
                 <h3>Default Collection</h3>
                 <div>
                     {characterInfo}
-                    {/* <MoreButton onClickMore={handleClickMore} /> */}
+                    <MoreButton onClickMore={handleClickMore} />
                 </div>
             </div>
         </div>

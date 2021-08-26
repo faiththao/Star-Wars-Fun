@@ -22,7 +22,7 @@ function App() {
       body: JSON.stringify(character),
     })
     .then(res => res.json())
-    .then(character => setCharacters([...characters, character]))
+    .then(character => setCharacters([character, ...characters]))
   }
 
   useEffect(() => {

@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 export default function ({ character }) {
-    const {uid, url, name} = character
+    const {id, url, name} = character
     const [comment, setComment] = useState('');
 
     // function addComment(comment, uid) {
