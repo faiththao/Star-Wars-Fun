@@ -12,6 +12,19 @@ function App() {
 
   const [characters, setCharacters] = useState([]);
 
+  function addComment(comment, id) {
+    fetch(`http://localhost:3001/results/${id}`, {
+        method: "PATCH",
+        headers: {
+            Accept: "*/*",
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(comment),
+    })
+        .then((res) => res.json())
+        .then((json) => console.log(json));
+  }
+
   function addNewCharacter(character) {
     fetch(characterAPI, {
       method: "POST",
@@ -39,7 +52,7 @@ function App() {
           <Route path="/players">
             <Players 
             characters={characters}
-            // addComment={addComment}
+            addComment={addComment}
              />
           </Route>
           <Route path="/createplayer">
