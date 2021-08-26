@@ -5,27 +5,30 @@ import Save from "@material-ui/icons/Save";
 import { withStyles } from "@material-ui/core";
 
 
-export default function ({ character, addComment }) {
+export default function ({ character }) {
 
     const { id, url, name } = character
 
     const [comment, setComment] = useState('');
+    const [inCommentBox, setInCommentBox] = useState([]);
+    // const commentList = [];
+    
 
 
     function handleComment(e) {
-        e.prevent.default()
-        addComment()
+        e.preventDefault();
+        // setComment(inCommentBox)
+        setInCommentBox(comment)
     }
+    
 
     return (
-        <div className="RenderCard" onSubmit={handleComment}>
-            <img src={url} alt={name} className="img" /> 
+        <div className="RenderCard" key={id} >
+            <img src={url} alt={name} className="img" />
             <h6>Name: {name}</h6>
             {/* <br /> */}
-            <p>
-                {comment}
-            </p>
-            <form >
+            <p>{inCommentBox}</p>
+            <form onSubmit={handleComment}>
 
                 <TextField
                     variant="outlined"

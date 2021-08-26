@@ -27,7 +27,7 @@ const useStyles = makeStyles({
 export default function PlayersCard({ character, onClick }) {
     const { name, url, id } = character
 
-    function handleClick(e) {
+    function handleClick() {
         onClick(character)
     }
 

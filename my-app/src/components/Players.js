@@ -1,9 +1,10 @@
 import RenderCard from "./RenderCard"
 
-export default function Players({ characters }) {
+export default function Players({ characters, addComment, inCommentBox }) {
     const characterInfo = characters.map((character) => (
         <RenderCard key={character.id} character={character} 
-        // addComment={addComment} 
+        addComment={addComment} 
+        inCommentBox={inCommentBox}
         />
     ))
     return (
