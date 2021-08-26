@@ -1,7 +1,14 @@
 import { useState } from "react"
+import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
+import Save from "@material-ui/icons/Save";
+import { withStyles } from "@material-ui/core";
+
 
 export default function ({ character, addComment }) {
-    const {id, url, name} = character
+
+    const { id, url, name } = character
+
     const [comment, setComment] = useState('');
 
 
@@ -12,24 +19,50 @@ export default function ({ character, addComment }) {
 
     return (
         <div className="RenderCard" onSubmit={handleComment}>
-            <img src={url} alt={name} className="img" />
-            <h2>Name: {name}</h2>
-            <form >
+            <img src={url} alt={name} className="img" /> 
+            <h6>Name: {name}</h6>
+            {/* <br /> */}
+            <p>
                 {comment}
-                <br />
-                <input 
+            </p>
+            <form >
+
+                <TextField
+                    variant="outlined"
+                    className="commentInput"
+                    type="text"
+                    label="Add comment..."
+                    color="secondary"
+                    value={comment}
+                    onChange={(e) => setComment(e.target.value)}
+                />
+
+                {/* <input
+
                 type="text" 
                 name="comment" 
                 placeholder="Add comment..." 
                 value={comment}
                 onChange={(e) => setComment(e.target.value)} 
-                />
-                <input
+                /> */}
+
+                <Button
+                    startIcon={<Save />}
+                    variant="contained"
+                    color="primary"
+                    type="submit"
+                    name="submit"
+                    value="Post"
+                >
+                    Post
+                </Button>
+
+                {/* <input
                 type="submit"
                 name="submit"
                 value="Post"
                 className="Post"
-                />
+                /> */}
             </form>
         </div>
     )

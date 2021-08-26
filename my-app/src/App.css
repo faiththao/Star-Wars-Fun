@@ -2,7 +2,7 @@
   text-align: center;
 } */
 
-.App {
+/* .App {
   text-align: center;
   display: grid;
   grid-template-columns: repeat(5, 1fr, 2fr, 2fr, 2fr, 1fr);
@@ -13,6 +13,11 @@
     ". bt bt bt ."
     ". . rm . ."
     ". tb tb tb .";
+} */
+
+.App {
+  text-align: center;
+  display: grid;
 }
 
 .App-logo {
@@ -63,7 +68,14 @@ a {
 }
 
 
-.homeContainer {
+/* .homeContainer {
   grid-area: bt;
-  align-items: center
+  align-items: center;
+  display: flex;
+  
+} */
+
+.countdownClass {
+  align-items: center;
+  display: flex;
 }

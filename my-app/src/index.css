@@ -24,14 +24,19 @@ code {
 }
 
 .RenderCard {
+  background-color: rgb(6, 58, 110);
   text-align: center;
   border: grey solid 1px;
-  padding: 1rem;
+  padding: 2rem;
   width: 15rem;
-  height: 25rem;
+  height: 35rem;
   display: inline-grid;
   margin: 1rem 2rem;
   box-shadow: 3px 4px #19134b;
+}
+
+.RenderCard p {
+  font-size: medium;
 }
 
 .img {
@@ -40,6 +45,13 @@ code {
   width: auto;
 }
 
+.commentInput {
+  color: white
+}
+
+.MuiInputBase-input {
+  color: white !important;
+}
 .newContainer {
   grid-area: bt;
   display: flex;
