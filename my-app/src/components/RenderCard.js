@@ -4,30 +4,22 @@ import Button from "@material-ui/core/Button";
 import Save from "@material-ui/icons/Save";
 import { withStyles } from "@material-ui/core";
 
-export default function ({ character }) {
-    const {id, url, name} = character
+
+export default function ({ character, addComment }) {
+
+    const { id, url, name } = character
+
     const [comment, setComment] = useState('');
 
-    // function addComment(comment, uid) {
-    //     fetch(`http://localhost:3001/results/${uid}`, {
-    //         method: "PATCH",
-    //         headers: {
-    //             "Content-Type": "application/json",
-    //         },
-    //         body: JSON.stringify(comment),
-    //     })
-    //         .then((res) => res.json())
-    //         .then((json) => console.log(json));
-    //   }
 
     function handleComment(e) {
         e.prevent.default()
-        // addComment()
+        addComment()
     }
 
     return (
         <div className="RenderCard" onSubmit={handleComment}>
-            <img src={url} alt={name} className="img" />
+            <img src={url} alt={name} className="img" /> 
             <h6>Name: {name}</h6>
             {/* <br /> */}
             <p>
@@ -46,6 +38,7 @@ export default function ({ character }) {
                 />
 
                 {/* <input
+
                 type="text" 
                 name="comment" 
                 placeholder="Add comment..." 

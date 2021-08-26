@@ -52,3 +52,19 @@ code {
 .MuiInputBase-input {
   color: white !important;
 }
+.newContainer {
+  grid-area: bt;
+  display: flex;
+  justify-content: space-evenly;
+  border: dashed;
+  padding: 10px;
+  height: 475px;
+  max-width: 100%;
+  overflow-y: scroll;
+  flex-wrap: nowrap;
+}
+
+.row {
+  flex-wrap: nowrap;
+  min-height: 100%;
+}
