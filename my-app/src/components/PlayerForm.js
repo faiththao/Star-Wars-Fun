@@ -1,9 +1,11 @@
 import { useState } from "react"
+import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
 
 export default function PlayerForm({ addCharacter }) {
     const [name, setName] = useState('');
     const [url, setUrl] = useState('');
-   
+
     function onSubmit(e) {
         e.preventDefault();
 
@@ -22,8 +24,9 @@ export default function PlayerForm({ addCharacter }) {
         <div className="container">
             <form className="character-form" onSubmit={onSubmit}>
                 <h2>Create Character to Put in Default Collection</h2>
-                Character Name:
-                <input
+                <TextField
+                    variant="outlined"
+                    color="primary"
                     type="text"
                     name="name"
                     placeholder="Character name..."
@@ -31,21 +34,26 @@ export default function PlayerForm({ addCharacter }) {
                     onChange={(e) => setName(e.target.value)}
                 />
                 <br />
-                Image URL:
-                <input
+                <TextField
+                    size="large"
+                    variant="outlined"
+                    color="primary"
                     type="text"
                     name="image"
-                    placeholder="Enter a character's image URL..."
+                    placeholder="Enter an image URL..."
                     value={url}
-                    onChange={(e) => setUrl(e.target.value)} 
+                    onChange={(e) => setUrl(e.target.value)}
                 />
                 <br />
-                <input
+                <Button
+                    variant="outlined"
                     type="submit"
                     name="submit"
+                    color="secondary"
                     value="Create Character"
-                    className="submit"
-                />
+                    className="submit">
+                    Submit
+                </Button>
             </form>
         </div>
     )

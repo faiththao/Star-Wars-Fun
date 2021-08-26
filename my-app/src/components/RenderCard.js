@@ -35,6 +35,7 @@ export default function ({ character }) {
                     className="commentInput"
                     type="text"
                     label="Add comment..."
+                    // placeholder="Add Comment..."
                     color="secondary"
                     value={comment}
                     onChange={(e) => setComment(e.target.value)}

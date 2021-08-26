@@ -6,8 +6,6 @@ import PlayersCard from './PlayersCard';
 export default function CreateCollection({ collection, onRemove }) {
     const [title, setTitle] = useState(''); 
 
-    console.log(onRemove)
-
     const characterData = collection.map((character) => (
         <PlayersCard
             key={character.id}
