@@ -45,7 +45,6 @@ code {
   width: auto;
 }
 
-<<<<<<< HEAD
 .commentInput {
   color: white
 }
@@ -53,21 +52,3 @@ code {
 .MuiInputBase-input {
   color: white !important;
 }
-=======
-.newContainer {
-  grid-area: bt;
-  display: flex;
-  justify-content: space-evenly;
-  border: dashed;
-  padding: 10px;
-  height: 475px;
-  max-width: 100%;
-  overflow-y: scroll;
-  flex-wrap: nowrap;
-}
-
-.row {
-  flex-wrap: nowrap;
-  min-height: 100%;
-}
->>>>>>> 9ef2a9b6548e88140a8061d96f6d3f7d258d0e26

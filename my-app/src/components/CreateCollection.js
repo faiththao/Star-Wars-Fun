@@ -13,10 +13,7 @@ export default function CreateCollection({ collection, onRemove }) {
             key={character.id}
             character={character}
             onClick={onRemove}
-<<<<<<< HEAD
-=======
         // onClick={console.log(character)}
->>>>>>> 9ef2a9b6548e88140a8061d96f6d3f7d258d0e26
         />
     ))
     
