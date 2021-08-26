@@ -1,6 +1,5 @@
 import { useState } from 'react'
 
-import PlayerForm from "./PlayerForm";
 import PlayersCard from './PlayersCard';
 
 
@@ -14,12 +13,21 @@ export default function CreateCollection({ collection, onRemove }) {
             key={character.id}
             character={character}
             onClick={onRemove}
+<<<<<<< HEAD
+=======
+        // onClick={console.log(character)}
+>>>>>>> 9ef2a9b6548e88140a8061d96f6d3f7d258d0e26
         />
     ))
-
+    
+    function onSubmit(e) {
+        e.prevent.default();
+        setTitle = ''
+    }
 
     return (
-        <div className="newCollection">
+        <div className="newCollection" onSubmit={onSubmit}>
+
             <h1>Create a New Character Collection!</h1>
             Collection Name:
             <input
@@ -36,9 +44,11 @@ export default function CreateCollection({ collection, onRemove }) {
                 className="submit"
             />
             <div className="newContainer">
-                {title}
-                {characterData}
+                <div className="row">
+                    {title}
+                    {characterData}
+                </div>
             </div>
-            
+
         </div>)
 }

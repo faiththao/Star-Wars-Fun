@@ -67,11 +67,6 @@ a {
   min-height: 100%;
 }
 
-.newContainer {
-  grid-area: bt;
-  display: flex;
-  justify-content: space-evenly;
-}
 
 /* .homeContainer {
   grid-area: bt;

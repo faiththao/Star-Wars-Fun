@@ -5,7 +5,11 @@ import Save from "@material-ui/icons/Save";
 import { withStyles } from "@material-ui/core";
 
 export default function ({ character }) {
+<<<<<<< HEAD
     const { uid, url, name } = character
+=======
+    const {id, url, name} = character
+>>>>>>> 9ef2a9b6548e88140a8061d96f6d3f7d258d0e26
     const [comment, setComment] = useState('');
 
     // function addComment(comment, uid) {
