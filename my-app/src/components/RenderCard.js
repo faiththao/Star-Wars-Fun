@@ -1,7 +1,11 @@
 import { useState } from "react"
+import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
+import Save from "@material-ui/icons/Save";
+import { withStyles } from "@material-ui/core";
 
 export default function ({ character }) {
-    const {uid, url, name} = character
+    const { uid, url, name } = character
     const [comment, setComment] = useState('');
 
     // function addComment(comment, uid) {
@@ -24,25 +28,48 @@ export default function ({ character }) {
     return (
         <div className="RenderCard" onSubmit={handleComment}>
             <img src={url} alt={name} className="img" />
-            <h2>Name: {name}</h2>
-            <br />
+            <h6>Name: {name}</h6>
+            {/* <br /> */}
             <p>
                 {comment}
             </p>
             <form >
-                <input 
+
+                <TextField
+                    variant="outlined"
+                    className="commentInput"
+                    type="text"
+                    label="Add comment..."
+                    color="secondary"
+                    value={comment}
+                    onChange={(e) => setComment(e.target.value)}
+                />
+
+                {/* <input
                 type="text" 
                 name="comment" 
                 placeholder="Add comment..." 
                 value={comment}
                 onChange={(e) => setComment(e.target.value)} 
-                />
-                <input
+                /> */}
+
+                <Button
+                    startIcon={<Save />}
+                    variant="contained"
+                    color="primary"
+                    type="submit"
+                    name="submit"
+                    value="Post"
+                >
+                    Post
+                </Button>
+
+                {/* <input
                 type="submit"
                 name="submit"
                 value="Post"
                 className="Post"
-                />
+                /> */}
             </form>
         </div>
     )

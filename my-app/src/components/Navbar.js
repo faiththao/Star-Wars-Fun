@@ -7,10 +7,10 @@ export default function Navbar() {
                 Home
             </NavLink> | 
             <NavLink to="/players">
-                Characters
+                 Characters
             </NavLink> | 
             <NavLink to="/createplayer">
-                Create a Character
+                 Create a Character
             </NavLink>
         </div>
     )
