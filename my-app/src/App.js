@@ -13,14 +13,14 @@ function App() {
   const [characters, setCharacters] = useState([]);
   const [inCommentBox, setInCommentBox] = useState([])
 
-  function addComment(comment, id) {
+  function addComment(id) {
     fetch(`http://localhost:3001/results/${id}`, {
         method: "PATCH",
         headers: {
             Accept: "*/*",
             "Content-Type": "application/json",
         },
-        body: JSON.stringify(comment),
+        body: JSON.stringify(),
     })
         .then((res) => res.json())
         .then((comment) => setInCommentBox([comment, ...inCommentBox]));

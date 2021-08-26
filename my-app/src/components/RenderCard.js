@@ -17,7 +17,7 @@ export default function ({ character }) {
 
     function handleComment(e) {
         e.preventDefault();
-        // setComment(inCommentBox)
+        
         setInCommentBox(comment)
     }
     
