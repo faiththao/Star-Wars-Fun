@@ -28,13 +28,8 @@ export default function ({ character }) {
             <img src={url} alt={name} className="img" />
             <h6 className="name">Name: {name}</h6>
             {/* <br /> */}
-<<<<<<< HEAD
-            <p>{inCommentBox}</p>
-            <form onSubmit={handleComment} className="commentForm">
-=======
             <p>{inCommentBox.map(comment => <li>{comment}</li>)}</p>
             <form onSubmit={handleComment}>
->>>>>>> 3ac461237f7e292e3106bdbccb4c833d19ba072d
 
                 <TextField
                     variant="outlined"
