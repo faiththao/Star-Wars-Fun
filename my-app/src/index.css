@@ -21,6 +21,7 @@ code {
   display: inline-grid;
   margin: 1rem 2rem;
   box-shadow: 3px 4px #19134b;
+  
 }
 
 .RenderCard {
@@ -57,6 +58,7 @@ code {
   display: flex;
   justify-content: space-evenly;
   border: dashed;
+  border-color: #5afc03;
   padding: 10px;
   height: 475px;
   max-width: 100%;

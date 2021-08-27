@@ -29,9 +29,15 @@ export default function PlayersCard({ character, onClick }) {
         const classes = useStyles();
         return <Button className={classes.root} onClick={() => handleClick()}>Add/Remove</Button>
     }
+    // function changeBorder(e) {
+    //     e.target.style.border = "#f8fc03";
+    //   }
 
     return (
-        <div className="PlayerCard">
+        <div className="PlayerCard" 
+        // onMouseOver={changeBorder}
+        >
+        
             <div
                 key={id}
                 >
