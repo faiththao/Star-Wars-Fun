@@ -1,5 +1,8 @@
 import { useState } from 'react'
 
+import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
+
 import PlayersCard from './PlayersCard';
 
 
@@ -27,21 +30,23 @@ export default function CreateCollection({ collection, onRemove }) {
                 <img className="bluelightsaber"
                 src="https://www.vippng.com/png/full/5-52474_lightsaber-blade-png-light-saber-transparent-background.png" alt="lightsaber"/>
             </h1>
-           
-            Collection Name:
-            <input
+            <TextField
+                variant="outlined"
                 type="text"
                 name="title"
-                placeholder="Name your collection"
+                placeholder="Enter collection name..."
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
             />
-            <input
+            <Button
+            variant="outlined"
+                color="secondary"
                 type="submit"
                 name="submit"
                 value="Name Collection"
-                className="submit"
-            />
+                className="submit">
+                    Name Collection
+            </Button>
             <div className="newContainer">
                 <div className="row">
                     {title}
