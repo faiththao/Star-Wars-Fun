@@ -3,57 +3,68 @@
     {
       "id": 1,
       "name": "Luke Skywalker",
-      "url": "https://media.contentapi.ea.com/content/dam/star-wars-battlefront-2/images/2019/08/swbf2-refresh-hero-large-heroes-page-luke-skywalker-16x9-xl.jpg.adapt.crop1x1.320w.jpg"
+      "url": "https://media.contentapi.ea.com/content/dam/star-wars-battlefront-2/images/2019/08/swbf2-refresh-hero-large-heroes-page-luke-skywalker-16x9-xl.jpg.adapt.crop1x1.320w.jpg",
+      "comments": []
     },
     {
       "id": 2,
       "name": "C-3PO",
-      "url": "https://ids.si.edu/ids/deliveryService?id=NMAH-JN2017-01944-000001"
+      "url": "https://ids.si.edu/ids/deliveryService?id=NMAH-JN2017-01944-000001",
+      "comments": []
     },
     {
       "id": 3,
       "name": "R2-D2",
-      "url": "https://cdn11.bigcommerce.com/s-5ylnei6or5/images/stencil/1280x1280/products/587/695/0116_R2_D2_28__28082.1514653978.jpg?c=2"
+      "url": "https://cdn11.bigcommerce.com/s-5ylnei6or5/images/stencil/1280x1280/products/587/695/0116_R2_D2_28__28082.1514653978.jpg?c=2",
+      "comments": []
     },
     {
       "id": 4,
       "name": "Darth Vader",
-      "url": "https://tse3.mm.bing.net/th?id=OIP.uDCDdlym07efjJ2umuS2hgHaIg&pid=Api&P=0&w=300&h=300"
+      "url": "https://tse3.mm.bing.net/th?id=OIP.uDCDdlym07efjJ2umuS2hgHaIg&pid=Api&P=0&w=300&h=300",
+      "comments": []
     },
     {
       "id": 5,
       "name": "Leia Organa",
-      "url": "https://tse4.mm.bing.net/th?id=OIP.GmAa41PoEuyk-aDIEMoXHAHaJQ&pid=Api&P=0&w=300&h=300"
+      "url": "https://tse4.mm.bing.net/th?id=OIP.GmAa41PoEuyk-aDIEMoXHAHaJQ&pid=Api&P=0&w=300&h=300",
+      "comments": []
     },
     {
       "id": 6,
       "name": "Owen Lars",
-      "url": "https://i.redd.it/msfhqowm99i01.jpg"
+      "url": "https://i.redd.it/msfhqowm99i01.jpg",
+      "comments": []
     },
     {
       "id": 7,
       "name": "Beru Whitesun lars",
-      "url": "https://i1.wp.com/overlydevotedarchivist.net/wp-content/uploads/2015/09/tumblr_mmabfxwihp1qmwgm9o2_250.png?resize=200%2C300&ssl=1"
+      "url": "https://i1.wp.com/overlydevotedarchivist.net/wp-content/uploads/2015/09/tumblr_mmabfxwihp1qmwgm9o2_250.png?resize=200%2C300&ssl=1",
+      "comments": []
     },
     {
       "id": 8,
       "name": "R5-D4",
-      "url": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F6%2F2019%2F01%2Fthe-mandalorian-2000.jpg&q=85"
+      "url": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F6%2F2019%2F01%2Fthe-mandalorian-2000.jpg&q=85",
+      "comments": []
     },
     {
       "id": 9,
       "name": "Biggs Darklighter",
-      "url": "https://themovieandthemuse.files.wordpress.com/2016/12/biggs-darklighter.jpg?w=323"
+      "url": "https://themovieandthemuse.files.wordpress.com/2016/12/biggs-darklighter.jpg?w=323",
+      "comments": []
     },
     {
       "id": 10,
       "name": "Obi-Wan Kenobi",
-      "url": "https://tse2.mm.bing.net/th?id=OIP.h1yE9zNIpnrYS3jk0vSjnQHaHa&pid=Api&P=0&w=300&h=300"
+      "url": "https://tse2.mm.bing.net/th?id=OIP.h1yE9zNIpnrYS3jk0vSjnQHaHa&pid=Api&P=0&w=300&h=300",
+      "comments": []
     },
     {
       "name": "Chewbacca",
       "url": "https://www.refinery29.com/images/9084590.jpg",
-      "id": 11
+      "id": 11,
+      "comments": []
     }
   ]
 }
