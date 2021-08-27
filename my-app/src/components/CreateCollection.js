@@ -23,7 +23,11 @@ export default function CreateCollection({ collection, onRemove }) {
     return (
         <div className="newCollection" onSubmit={onSubmit}>
 
-            <h1>Create a New Character Collection!</h1>
+            <h1>Create a New Character Collection! 
+                <img className="bluelightsaber"
+                src="https://www.vippng.com/png/full/5-52474_lightsaber-blade-png-light-saber-transparent-background.png" alt="lightsaber"/>
+            </h1>
+           
             Collection Name:
             <input
                 type="text"
