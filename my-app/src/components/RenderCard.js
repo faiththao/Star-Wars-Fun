@@ -18,7 +18,8 @@ export default function ({ character }) {
     function handleComment(e) {
         e.preventDefault();
         
-        setInCommentBox(comment)
+        setInCommentBox([...inCommentBox, comment])
+        console.log(inCommentBox)
     }
     
 
@@ -27,7 +28,7 @@ export default function ({ character }) {
             <img src={url} alt={name} className="img" />
             <h6>Name: {name}</h6>
             {/* <br /> */}
-            <p>{inCommentBox}</p>
+            <p>{inCommentBox.map(comment => <li>{comment}</li>)}</p>
             <form onSubmit={handleComment}>
 
                 <TextField
