@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+.commentForm {
+  color: white;
+}
+
 .PlayerCard {
   text-align: center;
   border: grey solid 1px;
@@ -25,15 +29,16 @@ code {
 }
 
 .RenderCard {
-  background-color: rgb(6, 58, 110);
+  background-color: rgb(0, 1, 85);
   text-align: center;
-  border: grey solid 1px;
+  border: solid;
+  border-color: white;
   padding: 2rem;
   width: 15rem;
   height: 35rem;
   display: inline-grid;
   margin: 1rem 2rem;
-  box-shadow: 3px 4px #19134b;
+  box-shadow: 3px 4px #f4fc03;
 }
 
 .RenderCard p {
@@ -47,7 +52,7 @@ code {
 }
 
 .commentInput {
-  color: white
+  color: white;
 }
 
 .MuiInputBase-input {
@@ -70,4 +75,48 @@ code {
 .row {
   flex-wrap: nowrap;
   min-height: 100%;
+}
+
+.navbar {
+  border: dashed;
+  border-color: red;
+  padding: 10px;
+  height: 100px;
+  max-width: 100%;
+  text-align: center;
+  
+}
+
+.navbar li {
+  list-style: none;
+  display: inline-block;
+  padding-right: 145px;
+  padding-left: 145px;
+  margin-top: 25px;
+}
+
+.name {
+  color: #ff0040;
+}
+
+.countdownClass {
+  align-items: center;
+  display: flex;
+}
+
+.lightsaber {
+  max-width: 60px;
+}
+
+.bluelightsaber {
+  max-width: 90px;
+}
+
+.greenlightsaber {
+  padding-top: 0px;
+  max-width: 70px;
+  max-height: 170px;
+  transform: rotate(90deg);
+  margin-left: auto;
+  margin-right: auto;
 }

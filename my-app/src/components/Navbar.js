@@ -3,15 +3,21 @@ import { NavLink } from "react-router-dom"
 export default function Navbar() {
     return (
         <div className="navbar">
-            <NavLink to="/">
-                Home
-            </NavLink> | 
-            <NavLink to="/players">
-                 Characters
-            </NavLink> | 
-            <NavLink to="/createplayer">
-                 Create a Character
-            </NavLink>
+            <li>
+                <NavLink to="/" className="navlink">
+                    Home
+                </NavLink>
+            </li>
+            <li>
+                <NavLink to="/characters" className="navlink">
+                    Characters
+                </NavLink>
+            </li>
+            <li>
+                <NavLink to="/createcharacter" className="navlink">
+                    Create a Character
+                </NavLink>
+            </li>
         </div>
     )
 }

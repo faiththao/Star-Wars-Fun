@@ -26,7 +26,7 @@ export default function ({ character }) {
     return (
         <div className="RenderCard" key={id} >
             <img src={url} alt={name} className="img" />
-            <h6>Name: {name}</h6>
+            <h6 className="name">Name: {name}</h6>
             {/* <br /> */}
             <p>{inCommentBox.map(comment => <li>{comment}</li>)}</p>
             <form onSubmit={handleComment}>

@@ -50,14 +50,14 @@ function App() {
       <header className="App-header">
         <Navbar />
         <Switch>
-          <Route path="/players">
+          <Route path="/characters">
             <Players 
             characters={characters}
             inCommentBox={inCommentBox}
             addComment={addComment}
              />
           </Route>
-          <Route path="/createplayer">
+          <Route path="/createcharacter">
             <CollectionPage
             characters={characters} 
             setCharacters={setCharacters}
